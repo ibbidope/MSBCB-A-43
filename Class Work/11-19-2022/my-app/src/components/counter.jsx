@@ -7,7 +7,11 @@ const Counter = () => {
     setCount(count + 1);
   };
   const dcrmnt = () => {
-    setCount(count - 1);
+    if (count === 0) {
+      setCount(0);
+    } else {
+      setCount(count - 1);
+    }
   };
   return (
     <div>
