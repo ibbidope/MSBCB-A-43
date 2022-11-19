@@ -1,3 +1,4 @@
+import "./style.css";
 import { useState } from "react";
 
 const Counter = () => {
@@ -20,8 +21,12 @@ const Counter = () => {
   return (
     <div>
       <span>{count}</span>
-      <button onClick={incrmnt}>Increment</button>
-      <button onClick={dcrmnt}>Decrement</button>
+      <button class="zero" onClick={incrmnt}>
+        Increment
+      </button>
+      <button class="nonzero" onClick={dcrmnt}>
+        Decrement
+      </button>
     </div>
   );
 };
