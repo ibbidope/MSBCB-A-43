@@ -1,9 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
-import LoginForm from "./components/Login";
+import Counter from "./components/Counter";
 
 function App() {
-  return <LoginForm />;
+  return <Counter />;
 }
 
 export default App;
