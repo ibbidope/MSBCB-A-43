@@ -4,13 +4,17 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
   const incrmnt = () => {
-    setCount(count + 1);
+    if (count === "ZERO") {
+      setCount(1);
+    } else {
+      setCount(count + 1);
+    }
   };
   const dcrmnt = () => {
-    if (count === 0) {
-      setCount(0);
-    } else {
+    if (count > 1) {
       setCount(count - 1);
+    } else {
+      setCount("ZERO");
     }
   };
   return (
