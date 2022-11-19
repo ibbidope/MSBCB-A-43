@@ -5,28 +5,24 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
   const incrmnt = () => {
-    if (count === "ZERO") {
+    /*if (count === "ZERO") {
       setCount(1);
     } else {
       setCount(count + 1);
-    }
+    }*/
+    setCount(count + 1);
   };
   const dcrmnt = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    } else {
-      setCount("ZERO");
-    }
+    if (count <= 0) return;
+    setCount(count - 1);
   };
   return (
     <div>
-      <span>{count}</span>
-      <button class="zero" onClick={incrmnt}>
-        Increment
-      </button>
-      <button class="nonzero" onClick={dcrmnt}>
-        Decrement
-      </button>
+      <span className={count === 0 ? "zero" : "nonzero"}>
+        {count === 0 ? "zero" : count}
+      </span>
+      <button onClick={incrmnt}>Increment</button>
+      <button onClick={dcrmnt}>Decrement</button>
     </div>
   );
 };
