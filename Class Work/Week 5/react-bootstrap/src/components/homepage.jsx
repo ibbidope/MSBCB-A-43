@@ -1,7 +1,6 @@
 import "./style.css";
 import { useState } from "react";
-
-const Counter = () => {
+const HomePage = () => {
   const [count, setCount] = useState(0);
 
   const incrmnt = () => {
@@ -12,14 +11,18 @@ const Counter = () => {
     setCount(count - 1);
   };
   return (
-    <div>
+    <div class="d-flex align-items-center">
       <span className={count === 0 ? "zero" : "nonzero"}>
         {count === 0 ? "zero" : count}
       </span>
-      <button onClick={incrmnt}>Increment</button>
-      <button onClick={dcrmnt}>Decrement</button>
+      <button class="btn btn-success" onClick={incrmnt}>
+        Increment
+      </button>
+      <button class="btn btn-danger" onClick={dcrmnt}>
+        Decrement
+      </button>
     </div>
   );
 };
 
-export default Counter;
+export default HomePage;
