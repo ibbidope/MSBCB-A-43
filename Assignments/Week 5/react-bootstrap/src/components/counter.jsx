@@ -1,6 +1,6 @@
-import "./style.css";
+import "../App.css";
 import { useState } from "react";
-const HomePage = () => {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   const incrmnt = () => {
@@ -25,4 +25,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Counter;
