@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
 // Uncontrolled
-export default function LoginForm() {
+/*export default function LoginForm() {
   const nameField = useRef();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,10 +20,10 @@ export default function LoginForm() {
       </form>
     </div>
   );
-}
+}*/
 
 // Controlled
-/*export default function LoginForm() {
+export default function LoginForm() {
   const [nameField, setNameField] = useState("");
   const handleSubmit = (event) => {};
   const handleChange = (event) => {
@@ -47,4 +47,3 @@ export default function LoginForm() {
     </div>
   );
 }
-*/
